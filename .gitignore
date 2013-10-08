@@ -31,3 +31,5 @@ start.bat
 sftp-config.json
 requirements.txt
 !.gitignore
+
+*.pdf
