@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # This file can be used to automatically fix the permissions of files in /home/brewpi and /var/www on a Linux system
 # with a default BrewPi install
 
@@ -24,12 +24,12 @@ myPath="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
 scriptPath="$(dirname "$myPath")"
 webPath="/var/www"
 
-echo -e "\n***** Fixing file permissions for $webPath *****\n"
+echo -e "\n***** Fixing file permissions for $webPath *****"
 sudo chown -R www-data:www-data "$webPath"||warn
 sudo chmod -R g+rwx "$webPath"||warn
 sudo find "$webPath" -type d -exec chmod g+rwxs {} \;||warn
 
-echo -e "\n***** Fixing file permissions for $scriptPath *****\n"
+echo -e "\n***** Fixing file permissions for $scriptPath *****"
 sudo chown -R brewpi:brewpi "$scriptPath"||warn
 sudo chmod -R g+rwx "$scriptPath"||warn
 sudo find "$scriptPath" -type d -exec chmod g+s {} \;||warn
