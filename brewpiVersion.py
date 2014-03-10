@@ -55,10 +55,11 @@ class AvrInfo:
     log = "l"
     commit = "c"
 
+    shield_diy = "diy"
     shield_revA = "revA"
     shield_revC = "revC"
 
-    shields = {1: shield_revA, 2: shield_revC}
+    shields = {0: shield_diy, 1: shield_revA, 2: shield_revC}
 
     board_leonardo = "leonardo"
     board_standard = "standard"
